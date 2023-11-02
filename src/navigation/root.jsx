@@ -12,7 +12,15 @@ import FeedingLog from '@/screens/feedingLog/feedingLog';
 const Stack = createNativeStackNavigator();
 
 const StackNavigatior = () => (
-  <Stack.Navigator mode="modal" initialRouteName={routes.BOTTOM_TABS}>
+  <Stack.Navigator
+    mode="modal"
+    initialRouteName={routes.BOTTOM_TABS}
+    screenOptions={{
+      gesturesEnabled: true,
+      headerBackTitleVisible: false,
+      headerTitleAlign: 'center',
+      headerTintColor: 'black',
+    }}>
     <Stack.Screen
       name={routes.BOTTOM_TABS}
       component={BottomTabs}
